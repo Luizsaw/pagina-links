@@ -153,12 +153,7 @@ A página se adapta automaticamente a diferentes tamanhos de tela:
 
 ### Integração com Analytics
 
-Descomente e configure o Google Analytics no `script.js`:
-
-```javascript
-// Adicione seu ID do Google Analytics
-gtag('config', 'GA_MEASUREMENT_ID');
-```
+Configure o Google Analytics no `index.html`
 
 ### PWA (Progressive Web App)
 

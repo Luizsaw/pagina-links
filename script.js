@@ -70,9 +70,6 @@ function handleLinkClick(linkItem) {
             default:
                 console.log('Link clicado:', category);
         }
-        
-        // Analytics
-        trackLinkClick(category);
     }, 300);
 }
 
@@ -344,29 +341,6 @@ function showNotification(message, type = 'info') {
         notification.style.animation = 'slideUp 0.3s ease-out';
         setTimeout(() => notification.remove(), 300);
     }, 3000);
-}
-
-// Analytics
-function trackLinkClick(category) {
-    // Integração com Google Analytics ou similar
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'click', {
-            event_category: 'Link',
-            event_label: category
-        });
-    }
-    console.log('Link clicked:', category);
-}
-
-function trackSocialClick(platform) {
-    // Integração com Google Analytics ou similar
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'click', {
-            event_category: 'Social',
-            event_label: platform
-        });
-    }
-    console.log('Social link clicked:', platform);
 }
 
 // Adiciona estilos CSS dinâmicos
